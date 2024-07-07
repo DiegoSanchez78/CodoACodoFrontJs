@@ -46,17 +46,19 @@ async function showProductos(){
   }
 
   productos.forEach((producto) => {
-    let tr = `<tr>
+    let tr = `<tr class="tr-crud">
                   <td>${producto.categoria}</td>
                   <td>${producto.nombre_producto}</td>
                   <td>${producto.material}</td>
                   <td>${producto.descripcion}</td>
                   <td>${producto.precio}</td>
-                  <td><img src="${producto.imagen} " alt="" width="30px"></td>
+                  <td><img class="img-crud" src="${producto.imagen} " alt="" width="60px"></td>
                   
                   <td>
-                      <button class="btn-cac" onclick='updateProducto(${producto.id})'><i class="fa fa-pencil"></i></button>
-                      <button class="btn-cac" onclick='deleteProducto(${producto.id})'><i class="fa fa-trash"></i></button>
+                      <button class="btn-crud" onclick='updateProducto(${producto.id})'><i class="fa-solid fa-pen fa-2xl " style="color: #5b493d;"></i></button>
+                  </td>
+                  <td>
+                      <button class="btn-crud" onclick='deleteProducto(${producto.id})'><i class="fa-solid fa-trash fa-2xl" style="color: #5b493d;"></i></button>
                   </td>
                 </tr>`;
     tableProductos.insertAdjacentHTML("beforeend", tr);

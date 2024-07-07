@@ -12,12 +12,65 @@
     <link rel="stylesheet" href="../static/css/Style.css">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <a href="">
-                Productos L y A
-            </a>
-        </nav>
+    <div id="logo-banner">
+        <div class="border-banner">
+            <p class="titulo-logo">Lujo & arte</p>
+            <p class="subtitulo-logo">-muebleria-</p>
+        </div>
+    </div>
+    <header id="navbar">
+        <section class="bar-menu">
+            <div class="boton-nav">
+                <nav class="nav-link">
+                    <ul class="menu-boton">
+                        <li class="list-boton">
+                            <img class="img-boton" src="../assets/menu.svg" alt="">
+                            <ul class="li-link">
+                                <li>
+                                    <a class="li-sublink" href="../Inicio.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="li-sublink" href="Comedor.html">Comedor</a>
+                                </li>
+                                <li>
+                                    <a class="li-sublink" href="Living.html">Living</a>
+                                </li>
+                                <li>
+                                    <a class="li-sublink" href="Dormitorio.html">Dormitorio</a>
+                                </li>
+                                <li>
+                                    <a class="li-sublink" href="Exterior.html">Exterior</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="nav-search">
+                <ul class="menu-search">
+                    <li class="list-search">
+                        <img class="search-boton" src="../assets/search.svg" alt="search">
+                        <div id="search" class="bar-search">
+                            <input type="text" class="input-search" placeholder="Buscar...">
+                        </div>
+                    </li>
+                </ul>
+                <div class="contacto">
+                    <a href="Contacto.html">
+                        <h1 class="btn primary">
+                            Contacto
+                        </h1>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <section class="logo-bar">
+            <div class="logo">
+                <img class="logo-L" id="animado-L" src="../static/IMG/logo-L.png" alt="">
+                <img class="logo-A" id="animado-A" src="../static/IMG/logo-A.png" alt="">
+
+            </div>
+        </section>
     </header>
     <main> 
         <section id="form" class="container ">
@@ -65,6 +118,8 @@
                         <th>Descripción</th>
                         <th>Precio</th>
                         <th>Foto</th>   
+                        <th>Editar</th>  
+                        <th>Eliminar</th>  
                     </tr>
                 </thead>
                 <tbody id="tbody-table-productos">
@@ -73,12 +128,69 @@
         </section>  
     </main>
     <footer id="footer">
-        <a href="">Términos y condiciones</a>
-        <a href="">Preguntas Frecuentes</a>
-        <a href="">Ayuda</a>
-        <a href="./crud-productos.html">CRUD Productos</a>
+        <nav>
+            <ul class="nav-footer">
+                <li>
+                    <a href="" class="articulo">Terminos y condiciones</a>
+                </li>
+                <li>
+                    <!-- etiqueta enlace interno al proyecto -->
+                    <a href="Contacto.html" class="articulo">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="redes">
+            <a class="red" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"
+                    style="color: #5b493d;"></i></a>
+            <a class="red" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"
+                    style="color: #5b493d;"></i></a>
+            <a class="red" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-2xl"
+                    style="color: #5b493d;"></i></a>
+            <div>
+                <iframe class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3207319214!2d-58.39220972426002!3d-34.59605037295699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabeb837e59f%3A0x889f2381bb3eba21!2sAv.%20Sta.%20Fe%201582%2C%20C1060ABO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1714863870994!5m2!1ses!2sar"
+                    width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="nav-footer">
+            <h4 class="articulo"><i class="fa-brands fa-whatsapp"></i> 011-5545-1234</h4>
+            <h4 class="articulo"><i class="fa-solid fa-phone"></i> 011-5545-5455</h4>
+            <h4 class="articulo"><i class="fa-regular fa-envelope"></i> lujoyarte@gmail.com</h4>
+            <h4 class="articulo"><i class="fa-solid fa-location-dot"></i> Av Santa fe 1582 - CABA</h4>
+        </div>
+        <div class="form-pays">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png"
+                alt="">
+            <img class="image-form-pays"
+                src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png"
+                alt="">
+
+        </div>
+        <div class="form-pays">
+            <h6>© Copyright Chear de casa - 2024. Todos los derechos reservados.</h6>
+
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <a class="whatsapp" href=https://api.whatsapp.com/send/?phone=1163076853 target="_blank"><i
+            class="fa-brands fa-whatsapp fa-2xl" style="color: #00bb2d;"></i></a>
+    <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
     <script src="../static/js/crud-productos-fetch.js"></script>
 </body>
 </html>
