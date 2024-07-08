@@ -1,11 +1,13 @@
-../<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comedor Nórdico</title>
-    <link rel="stylesheet" href="../../static/CSS/Style.css">
+    <title>Detalle de Producto</title>
+    <link rel="stylesheet" href="../static/CSS/Style.css">
 </head>
+
 <body>
     <div id="logo-banner">
         <div class="border-banner">
@@ -18,42 +20,34 @@
             <div class="boton-nav">
                 <nav class="nav-link">
                     <ul class="menu-boton">
-                        <li class="list-boton">
-                            <img class="img-boton" src="../../assets/menu.svg" alt="">
-                            <ul class="li-link">
-                                <li>
-                                    <a class="li-sublink" href="../../Inicio.html">Inicio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="../Comedor.html">Comedor</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="../.html">Living</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="../Dormitorio.html">Dormitorio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="../Exterior.html">Exterior</a>
-                                </li>
-                            </ul>
-                        </li>
+
+                        <ul class="menu-boton">
+                            <li class="list-boton">
+                                <img class="img-boton" src="../assets/menu.svg" alt="">
+                                <ul class="li-link" id="categoria-nav">
+                                    <li>
+                                        <a class="li-sublink" href="#">Inicio</a>
+                                    </li>
+                                    <!-- Aquí se cargarán las categorías dinámicamente -->
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                 </nav>
             </div>
             <nav class="nav-search">
                 <ul class="menu-search">
                     <li class="list-search">
-                        <img class="search-boton" src="../../assets/search.svg" alt="search">
+                        <img class="search-boton" src="../assets/search.svg" alt="search">
                         <div id="search" class="bar-search">
                             <input type="text" class="input-search" placeholder="Buscar...">
                         </div>
                     </li>
                 </ul>
                 <div class="contacto">
-                    <a href="../Contacto.html">
+                    <a href="../template/Contacto.html">
                         <h1 class="btn primary">
-                            Contacto
+                            ConTACTo
                         </h1>
                     </a>
                 </div>
@@ -61,70 +55,66 @@
         </section>
         <section class="logo-bar">
             <div class="logo">
-                <img class="logo-L" id="animado-L" src="../../static/IMG/logo-L.png" alt="">
-                <img class="logo-A" id="animado-A" src="../../static/IMG/logo-A.png" alt="">
+                <img class="logo-L" id="animado-L" src="../static/IMG/logo-L.png" alt="">
+                <img class="logo-A" id="animado-A" src="../static/IMG/logo-A.png" alt="">
 
             </div>
         </section>
     </header>
-    <main>
-        <section id="">
-            <div class="container">
-                <h2 class="titulo">Comedor Nórdico</h2>
-                <div >
-                    <img id="ecardimg" src="../../static/IMG/ComedorNordico.jpg" alt="Juego de comedor madera" >
-                </div>
-                <div class="texto-parrafo">
-                    <p>Moderno juego de comedor hecho en madera de cedro.</p>
-                    <p>Largo mesa: 1,60 m</p>
-                    <p>$ 680.000</p>
-                </div>
-                <div class="texto-parrafo">  
-                    <h4>Medios de pago:</h4>
-                    <p>Efectivo: 15% de descuento.</p>
-                    <p>Transferencia o tarjeta de débito: 10% de descuento.</p>
-                    <p>Tarjeta de crédito en 3 pagos sin interés.</p>
-                    <p>Tarjeta de crédito en 6 pagos: 10% de recargo.</p>
-                    <p>Transferencia o tarjeta de débito: 10% de descuento.</p>
-                    <p>Tarjeta de crédito en 3 pagos sin interés.</p>
-                    <p>Tarjeta de crédito en 6 pagos: 10% de recargo.</p>
-                </div>
-                <div>
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png"
-                    alt="">
-                    <img class="mpagoimg"
-                    src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png"
-                    alt="">
-                </div>
-            </div>
-        </section>
-    </main>
+    <div id="detalle-producto">
+        <!-- Aquí se cargarán los detalles del producto -->
+    </div>
+
+    <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
+    <script src="../static/js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const idProducto = urlParams.get('id');
+            if (idProducto) {
+                let producto = await fetchData(`${BASEURL}/api/productos/${idProducto}`, 'GET');
+                if (producto) {
+                    renderizarDetalleProducto(producto);
+                } else {
+                    console.error(`No se encontró el producto con ID ${idProducto}`);
+                }
+            } else {
+                console.error('Falta el parámetro ID en la URL');
+            }
+        });
+
+        function renderizarDetalleProducto(producto) {
+            const detalleProducto = document.getElementById('detalle-producto');
+            detalleProducto.innerHTML = `
+                <h2 class="nombre-producto">${producto.nombre_producto}</h2>
+                <section class="card-producto">
+                    <div class="img-producto">
+                        <img class="img-producto" src= "${producto.imagen}"  alt="${producto.nombre_producto}">
+                    </div>
+                    <div class="info-producto">
+                        <p>Descripción: ${producto.descripcion}</p>
+                        <p>Precio: ${producto.precio}</p>
+                        <a href="../template/Contacto.html">Contactar</a>
+                    </div>
+                </section>
+            `;
+        }
+    </script>
     <footer id="footer">
         <nav>
             <ul class="nav-footer">
                 <li>
-                    <a href="../TerminosyCondiciones.html" target="_blank" class="articulo">Terminos y condiciones</a>
+                    <a href="../Template/TerminosyCondiciones.html" class="articulo">Terminos y condiciones</a>
                 </li>
                 <li>
                     <!-- etiqueta enlace interno al proyecto -->
-                    <a href="../Contacto.html" class="articulo">Contacto</a>
+                    <a href="../Template/Contacto.html" class="articulo">Contacto</a>
                 </li>
+                <li>
+                    <!-- etiqueta enlace interno al proyecto -->
+                    <a href="../Template/crud-productos.html" class="articulo">CRUD Productos</a>
+                </li>
+
             </ul>
         </nav>
         <div class="redes">
@@ -172,12 +162,14 @@
 
         </div>
         <div class="form-pays">
-            <h6>© Copyright Chear de casa - 2024. Todos los derechos reservados.</h6>
+            <h6>© Copyright Lujo y Arte - 2024. Todos los derechos reservados.</h6>
+
         </div>
     </footer>
     <a class="whatsapp" href=https://api.whatsapp.com/send/?phone=1163076853 target="_blank"><i
             class="fa-brands fa-whatsapp fa-2xl" style="color: #00bb2d;"></i></a>
+    <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
+    <script src="../static/js/crud-productos-fetch.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
-<script src="../formulario.js"></script>
+
 </html>

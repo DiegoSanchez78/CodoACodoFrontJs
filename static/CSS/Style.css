@@ -47,6 +47,7 @@ main{
     animation-fill-mode: forwards;
 }
 
+
 .logo{
     width: 60px;
     margin: 3px;
@@ -365,6 +366,19 @@ main{
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.container-form {
+    display: flex;
+    margin: 4rem 2rem;
+    padding: 2rem;
+    background-color: #f3ede5;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .product-list{
@@ -880,4 +894,36 @@ html.mode img , html.mode .whatsapp {
 
 td {
     padding: 0rem 0.5rem;
+}
+
+.card-producto {
+    display: flex;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border-color: 1px solid;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-style: normal;
+    color: #5b493d;
+}
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5rem;
+    font-size: 1.5rem;
+}
+.nombre-producto ,#categoria-titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+.img-producto {
+    width: 30rem;
+    height: 30rem;
+    margin: 1rem;
+    border-radius: 10px;
 }

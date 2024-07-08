@@ -130,25 +130,7 @@ async function saveProductos() {
 }
 
 
-/**
- * Function que permite eliminar una producto del array del localstorage
- * de acuedo al indice del mismo
- * @param {number} id posición del array que se va a eliminar
- */
-function deleteProducto(id){
-    Swal.fire({
-        title: "Esta seguro de eliminar el producto?",
-        showCancelButton: true,
-        confirmButtonText: "Eliminar",
-    }).then(async (result) => {
-        if (result.isConfirmed) {
-          let response = await fetchData(`${BASEURL}/api/productos/${id}`, 'DELETE');
-          showProductos();
-          Swal.fire(response.message, "", "success");
-        }
-    });
-    
-}
+
 
 /**
  * Function que permite cargar el formulario con los datos del producto 
@@ -189,8 +171,104 @@ async function updateProducto(id) {
   imagen.value = response.imagen;
 }
 
+/**
+ * Function que permite eliminar una producto del array del localstorage
+ * de acuedo al indice del mismo
+ * @param {number} id posición del array que se va a eliminar
+ */
+function deleteProducto(id){
+  Swal.fire({
+      title: "Esta seguro de eliminar el producto?",
+      showCancelButton: true,
+      confirmButtonText: "Eliminar",
+  }).then(async (result) => {
+      if (result.isConfirmed) {
+        let response = await fetchData(`${BASEURL}/api/productos/${id}`, 'DELETE');
+        showProductos();
+        Swal.fire(response.message, "", "success");
+      }
+  });
+  
+}
+
+async function getCategorias() {
+  let categorias = await fetchData(BASEURL + '/api/categorias', 'GET');
+  console.log(categorias);
+  const tableCategorias = document.querySelector('#list-categorias');
+  console.log(tableCategorias);
+  tableCategorias.innerHTML = '';
+  
+  if (!Array.isArray(categorias)) {
+      console.error('Expected an array but got:', categorias);
+      return;
+  }
+
+  categorias.forEach((categoria) => {
+      let tr = `<tr class="tr-crud">
+                    <td>${categoria.categoria}</td>
+                </tr>`;
+      tableCategorias.insertAdjacentHTML("beforeend", tr);
+
+      console.log('CATEGORIAS:', categorias);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const btnSaveMovie = document.querySelector('#btn-save-movie');
   btnSaveMovie.addEventListener('click', saveProductos);
   showProductos();
+  getCategorias();  // Añadir esta línea para cargar las categorías
 });
+
+async function getCategorias() {
+  let categorias = await fetchData(BASEURL + '/api/categorias', 'GET');
+  console.log(categorias);
+  const tableCategorias = document.querySelector('#list-categorias');
+  console.log(tableCategorias);
+  tableCategorias.innerHTML = '';
+  
+  if (!Array.isArray(categorias)) {
+      console.error('Expected an array but got:', categorias);
+      return;
+  }
+
+  categorias.forEach((categoria) => {
+      let tr = `<tr class="tr-crud">
+                    <td>${categoria.categoria}</td>
+                </tr>`;
+      tableCategorias.insertAdjacentHTML("beforeend", tr);
+
+      console.log('CATEGORIAS:', categorias);
+  });
+}
+
+async function loadCategoriasNav() {
+  let categorias = await fetchData(BASEURL + '/api/categorias', 'GET');
+  const categoriaNav = document.querySelector('#categoria-nav');
+  
+  if (!Array.isArray(categorias)) {
+      console.error('Expected an array but got:', categorias);
+      return;
+  }
+
+  categorias.forEach((categoria) => {
+      let li = `<li>
+                    <a class="li-sublink" href="../template/CardsCategoria.html?categoria=${categoria.categoria}">${categoria.categoria}</a>
+                </li>`;
+      categoriaNav.insertAdjacentHTML("beforeend", li);
+  });
+}
+
+
+loadCategoriasNav();
+
+getCategorias();
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const btnSaveMovie = document.querySelector('#btn-save-movie');
+//   btnSaveMovie.addEventListener('click', saveProductos);
+//   showProductos();
+// });
+

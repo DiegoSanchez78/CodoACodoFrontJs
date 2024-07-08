@@ -23,26 +23,18 @@
             <div class="boton-nav">
                 <nav class="nav-link">
                     <ul class="menu-boton">
-                        <li class="list-boton">
-                            <img class="img-boton" src="../assets/menu.svg" alt="">
-                            <ul class="li-link">
-                                <li>
-                                    <a class="li-sublink" href="../Inicio.html">Inicio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="Comedor.html">Comedor</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="Living.html">Living</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="Dormitorio.html">Dormitorio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="Exterior.html">Exterior</a>
-                                </li>
-                            </ul>
-                        </li>
+
+                        <ul class="menu-boton">
+                            <li class="list-boton">
+                                <img class="img-boton" src="../assets/menu.svg" alt="">
+                                <ul class="li-link" id="categoria-nav">
+                                    <li>
+                                        <a class="li-sublink" href="#">Inicio</a>
+                                    </li>
+                                    <!-- Aquí se cargarán las categorías dinámicamente -->
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                 </nav>
             </div>
@@ -56,7 +48,7 @@
                     </li>
                 </ul>
                 <div class="contacto">
-                    <a href="Contacto.html">
+                    <a href="../template/Contacto.html">
                         <h1 class="btn primary">
                             ConTACTo
                         </h1>
@@ -175,5 +167,6 @@
 </body>
 <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
 <script src="../formulario.js"></script>
+<script src="../static/js/crud-productos-fetch.js"></script>
 
 </html>

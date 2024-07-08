@@ -21,26 +21,19 @@
             <div class="boton-nav">
                 <nav class="nav-link">
                     <ul class="menu-boton">
-                        <li class="list-boton">
-                            <img class="img-boton" src="./assets/menu.svg" alt="">
-                            <ul class="li-link">
-                                <li>
-                                    <a class="li-sublink" href="#">Inicio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="./template/Comedor.html">Comedor</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="./template/Living.html">Living</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="./template/Dormitorio.html">Dormitorio</a>
-                                </li>
-                                <li>
-                                    <a class="li-sublink" href="./template/Exterior.html">Exterior</a>
-                                </li>
-                            </ul>
-                        </li>
+
+                        <ul class="menu-boton">
+                            <li class="list-boton">
+                                <img class="img-boton" src="./assets/menu.svg" alt="">
+                                <ul class="li-link" id="categoria-nav">
+                                    <li>
+                                        <a class="li-sublink" href="#">Inicio</a>
+                                    </li>
+                                    <!-- Aquí se cargarán las categorías dinámicamente -->
+                                </ul>
+                            </li>
+                        </ul>
+
                     </ul>
                 </nav>
             </div>
@@ -79,6 +72,25 @@
                 </p>
             </div>
         </section>
+<!-- **** -->
+        <section id="categorias">
+            <h3 class="subtitle">Categorías</h3>
+            <section class="container">
+                <table id="categoria" class="table">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-categorias">
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        
+
+<!-- **** -->
         <section id="producto-destacado">
             <h2 class="titulo">Productos destacados</h2>
             <div class="container">
@@ -245,7 +257,9 @@
     <a class="whatsapp" href=https://api.whatsapp.com/send/?phone=1163076853 target="_blank"><i
             class="fa-brands fa-whatsapp fa-2xl" style="color: #00bb2d;"></i></a>
     <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
-    <script src="./formulario.js"></script>
+    
+    <script src="./static/js/crud-productos-fetch.js"></script>
+    <!-- <script src="./formulario.js"></script> -->
 
 </body>
 
